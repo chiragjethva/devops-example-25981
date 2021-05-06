@@ -22,6 +22,11 @@ variable "name" {
 
 }
 
+variable "versionname" {
+
+}
+
+
 variable "sgid" {
 
 }

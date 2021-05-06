@@ -11,6 +11,7 @@ resource "aws_instance" "myinstance" {
   vpc_security_group_ids = [var.sgid]
   tags = {
     Terraform = "true"
+    Version   = var.versionname
   }
 
 
