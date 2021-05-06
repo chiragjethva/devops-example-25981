@@ -74,7 +74,7 @@ jobs:
           KEYFILE: ${{secrets.KEYFILE}}
 
       - name: Cat op
-        run: cat mykey.pem
+        run: echo $GITHUB_RUN_ID
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
