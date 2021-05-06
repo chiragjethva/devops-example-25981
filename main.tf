@@ -19,7 +19,7 @@ module "ec2" {
   name             = "myInstance"
   sgid             = module.sg.security_group_id
   private_key_path = "./mykey.pem"
-  versionname      = "${{ GITHUB_RUN_ID }}"
+  versionname      = ${{ GITHUB_RUN_ID }}
 }
 
 module "rds" {
