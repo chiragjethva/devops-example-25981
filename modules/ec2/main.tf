@@ -26,10 +26,6 @@ resource "aws_instance" "myinstance" {
     destination = "/tmp/script.sh"
   }
 
-  provisioner "file" {
-    source      = "~/.aws"
-    destination = "~/.aws"
-  }
 
   provisioner "remote-exec" {
     inline = [
