@@ -18,6 +18,10 @@ resource "aws_instance" "myinstance" {
 
 resource "null_resource" "install" {
 
+  triggers = {
+    always_run = "${timestamp()}"
+  }
+
   connection {
     type        = "ssh"
     user        = "ec2-user"
