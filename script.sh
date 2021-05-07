@@ -23,7 +23,9 @@ perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' /home/ec2-user/devops-e
 
 cd /home/ec2-user/devops-example-25981/src/
 
-docker-compose -f docker-compose.override.yml up -d
+
+docker-compose down
+docker-compose -f docker-compose.override.yml up -d --build
 docker-compose exec web python3 manage.py makemigrations
 docker-compose exec web python3 manage.py migrate
 
