@@ -5,6 +5,9 @@ sudo yum install git -y
 
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
+
+rm -rf devops-example-25981
+
 git clone https://github.com/chiragjethva/devops-example-25981.git
 cd devops-example-25981
 
