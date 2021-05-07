@@ -11,13 +11,3 @@ services:
       - ./:/opt/webapp
     ports:
       - "8000:${PORT}"
-  postgres:
-    environment:
-      POSTGRES_PASSWORD: <postgres_pwd>
-    volumes:
-      - ./postgres-data/postgres:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-  redis:
-    ports:
-      - "6379:6379"
