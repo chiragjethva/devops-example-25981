@@ -32,6 +32,4 @@ module "redis-cluster" {
   sgid   = module.sg.security_group_id
 }
 
-output "app_url" {
-  value = "http://${aws_instance.myinstance.public_ip}:8000"
-}
+
