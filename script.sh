@@ -10,15 +10,15 @@ cd devops-example-25981
 
 pwd
 
-mv .env.example ./src/.env
+mv /home/ec2-user/devops-example-25981/.env.example /home/ec2-user/devops-example-25981/src/.env
 
 pwd
 
-perl -i -pe's/postgres_pwd=.*/postgres_pwd='"${postgres_pwd}"'/g' ./src/.env
-perl -i -pe's/DATABASE_URL=.*/DATABASE_URL='"${DATABASE_URL}"'/g' ./src/.env
-perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' ./src/.env
+perl -i -pe's/postgres_pwd=.*/postgres_pwd='"${postgres_pwd}"'/g' /home/ec2-user/devops-example-25981/src/.env
+perl -i -pe's/DATABASE_URL=.*/DATABASE_URL='"${DATABASE_URL}"'/g' /home/ec2-user/devops-example-25981/src/.env
+perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' /home/ec2-user/devops-example-25981/src/.env
 
-cd ./src/
+cd /home/ec2-user/devops-example-25981/src/
 
 docker-compose -f docker-compose.override.yml up -d
 docker-compose exec web python3 manage.py makemigrations
