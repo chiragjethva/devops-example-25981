@@ -8,7 +8,12 @@ sudo chmod +x /usr/bin/docker-compose
 git clone https://github.com/chiragjethva/devops-example-25981.git
 cd devops-example-25981
 
+pwd
+
 mv .env.example ./src/.env
+
+pwd
+
 perl -i -pe's/postgres_pwd=.*/postgres_pwd='"${postgres_pwd}"'/g' ./src/.env
 perl -i -pe's/DATABASE_URL=.*/DATABASE_URL='"${DATABASE_URL}"'/g' ./src/.env
 perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' ./src/.env

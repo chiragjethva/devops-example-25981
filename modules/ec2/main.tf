@@ -19,7 +19,7 @@ resource "aws_instance" "myinstance" {
 resource "null_resource" "install" {
 
   triggers = {
-    always_run = "${timestamp()}"
+    always_run = var.versionname
   }
 
   connection {
