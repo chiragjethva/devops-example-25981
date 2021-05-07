@@ -9,9 +9,9 @@ git clone https://github.com/chiragjethva/devops-example-25981.git
 cd devops-example-25981
 
 mv .env.example ./src/.env
-perl -i -pe's/postgres_pwd=.*/postgres_pwd='"${postgres_pwd}"'/g' .env
-perl -i -pe's/DATABASE_URL=.*/DATABASE_URL='"${DATABASE_URL}"'/g' .env
-perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' .env
+perl -i -pe's/postgres_pwd=.*/postgres_pwd='"${postgres_pwd}"'/g' ./src/.env
+perl -i -pe's/DATABASE_URL=.*/DATABASE_URL='"${DATABASE_URL}"'/g' ./src/.env
+perl -i -pe's/REDIS_URL=.*/REDIS_URL='"${REDIS_URL}"'/g' ./src/.env
 
 cd ./src/
 
