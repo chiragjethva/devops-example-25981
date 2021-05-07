@@ -43,7 +43,7 @@ resource "null_resource" "install" {
 
 }
 
-output "app_url" {
+output "web_url" {
 
   description = "Public IP of the instance"
   value       = "http://${aws_instance.myinstance.public_ip}:8000"

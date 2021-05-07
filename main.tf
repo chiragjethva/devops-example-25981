@@ -32,4 +32,7 @@ module "redis-cluster" {
   sgid   = module.sg.security_group_id
 }
 
+output "web_url" {
+  value = module.ec2.web_url
+}
 
