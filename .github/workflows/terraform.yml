@@ -74,7 +74,7 @@ jobs:
           KEYFILE: ${{secrets.KEYFILE}}
 
       - name: Cat op
-        run: perl -i -pe's/versionname .*/versionname = '${GITHUB_RUN_ID}'/g' main.tf
+        run: perl -i -pe's/versionname .*/versionname = "'${GITHUB_RUN_ID}'"/g' main.tf
 
       - name: cat main.tf
         run: cat main.tf
