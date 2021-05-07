@@ -76,8 +76,8 @@ jobs:
       - name: Cat op
         run: perl -i -pe's/versionname .*/versionname = "'${GITHUB_RUN_ID}'"/g' main.tf
 
-      - name: cat main.tf
-        run: cat main.tf
+      - name: execute awsenv
+        run: sh awsenv.sh
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
