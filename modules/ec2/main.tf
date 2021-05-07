@@ -14,19 +14,21 @@ resource "aws_instance" "myinstance" {
     Version   = var.versionname
   }
 
+}
+
+resource "null_resource" "install" {
 
   connection {
     type        = "ssh"
     user        = "ec2-user"
     private_key = file(var.private_key_path)
-    host        = self.public_ip
+    host        = aws_instance.myinstance.public_ip
   }
 
   provisioner "file" {
     source      = "script.sh"
     destination = "/tmp/script.sh"
   }
-
 
   provisioner "remote-exec" {
     inline = [
